@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "exit&07ik0r45*-dk1h)cbi&hxy=kfzr2(75r9d=iv76l$5*$qb_t9"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['imobi-django.herokuapp.com']
 
 
 # Application definition
