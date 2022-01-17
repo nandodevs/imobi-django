@@ -16,7 +16,7 @@ SECRET_KEY = "exit&07ik0r45*-dk1h)cbi&hxy=kfzr2(75r9d=iv76l$5*$qb_t9"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['imobi-django.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','imobi-project.herokuapp.com']
 
 
 # Application definition
@@ -79,7 +79,10 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 
 DATABASES = {}
 
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
