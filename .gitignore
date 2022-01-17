@@ -111,7 +111,6 @@ ENV/
 *.pyc
 *.db
 *.pid
-db.sqlite3
 
 # Ignore Django Migrations in Development if you are working on team
 
