@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 #     }
 # }
 
-#DATABASES = {}
+DATABASES = {}
 
-# DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config()
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'db_django',
-        'USER': 'postgres',
-        'PASSWORD':'070613',
-        'HOST': 'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME':'db_django',
+#         'USER': 'postgres',
+#         'PASSWORD':'070613',
+#         'HOST': 'localhost'
+#     }
+# }
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
