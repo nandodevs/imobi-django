@@ -21,7 +21,7 @@
 
         <div class="col-md cont">
             <div class="card_imovel">
-                <img class="img_capa_imovel" src="{{imovel.imagens.all}}">
+                <img class="img_capa_imovel" src="{{imovel.imagens.all.0.img.url}}">
                 <div class="informacoes_imoveis">
                     <a class="a_none" href="{% url 'imovel' imovel.id %}">
                         <h4 class="valor">R$ {{imovel.valor}}</h4>
@@ -30,9 +30,7 @@
                     <br>
                     <img width="10%" src="{% static 'plataforma/img/heart.png' %}">
                 </div>
-
             </div>
-
         </div>
 
         {% endfor %}

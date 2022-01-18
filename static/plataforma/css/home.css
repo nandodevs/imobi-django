@@ -11,7 +11,7 @@
 
 .card_imovel{
     background-color: #30CD9E;
-
+    position:relative;
     width: 20rem;
     margin-top: 50px;
     border-radius: 26px;
@@ -19,7 +19,7 @@
 
 .img_capa_imovel{
 
-    width: 100%;
+    width: 80%;
     border-top-left-radius: 26px;
     border-top-right-radius: 26px;
 
@@ -27,7 +27,7 @@
 
 .informacoes_imoveis{
 
-    padding: 20px;
+    padding: 15px;
     color: white;
 
 }

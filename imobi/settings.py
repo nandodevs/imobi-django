@@ -16,7 +16,7 @@ SECRET_KEY = "exit&07ik0r45*-dk1h)cbi&hxy=kfzr2(75r9d=iv76l$5*$qb_t9"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['imobi-project.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','imobi-project.herokuapp.com']
 
 
 # Application definition
@@ -57,7 +57,6 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -77,7 +76,19 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 #     }
 # }
 
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db-django',                      
+        'USER': 'postgres',
+        'PASSWORD': '070613',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+
+# DATABASES = {}
 
 DATABASES['default'] = dj_database_url.config()
 
