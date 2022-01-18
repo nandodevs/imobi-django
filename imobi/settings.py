@@ -1,6 +1,8 @@
 from pathlib import Path
 import dj_database_url
 import os
+
+from django.conf.global_settings import DATABASES
 from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'autenticacao',
     'plataforma'
 ]
@@ -87,9 +90,10 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 #     }
 # }
 
-DATABASES = {}
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
-DATABASES['default'] = dj_database_url.config()
+# DATABASES = {'default': dj_database_url.config()}
 
 # DATABASES = {
 #     'default': {
