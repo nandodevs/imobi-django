@@ -87,7 +87,6 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 #     }
 # }
 
-
 DATABASES = {}
 
 DATABASES['default'] = dj_database_url.config()
