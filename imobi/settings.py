@@ -17,7 +17,7 @@ SECRET_KEY = "exit&07ik0r45*-dk1h)cbi&hxy=kfzr2(75r9d=iv76l$5*$qb_t9"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','imobi-project.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
