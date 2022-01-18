@@ -3,7 +3,6 @@ import dj_database_url
 import os
 import django_heroku
 import cloudinary
-import cloudinary_storage
 from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
