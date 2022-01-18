@@ -2,6 +2,9 @@ from pathlib import Path
 import dj_database_url
 import os
 
+import django_heroku
+import psycopg2
+
 from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -166,3 +169,5 @@ MESSAGE_TAGS = {
 #     from .settings_local import *
 # except ImportError:
 #     pass
+
+django_heroku.settings(locals())
