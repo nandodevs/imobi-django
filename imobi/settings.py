@@ -2,8 +2,8 @@ from pathlib import Path
 import dj_database_url
 import os
 import django_heroku
-import psycopg2
-
+import cloudinary
+import cloudinary_storage
 from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'autenticacao',
     'plataforma'
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -111,6 +113,15 @@ DATABASES = {'default': dj_database_url.config()}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
+# Cloudinary stuff
+cloudinary.config(
+  cloud_name = "dmwdtsxbd",
+  api_key = "717332457624551",
+  api_secret = "ptQGChLAyaP2NlrWCQYqsIkpbxM"
+)
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
