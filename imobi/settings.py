@@ -1,7 +1,6 @@
 from pathlib import Path
 import dj_database_url
 import os
-
 import django_heroku
 import psycopg2
 
@@ -62,6 +61,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
