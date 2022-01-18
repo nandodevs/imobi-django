@@ -1,11 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+
 
 class Imagem(models.Model):
-    img = models.ImageField(upload_to='img')
+    img = CloudinaryField('img')
 
-    def __str__(self) -> str:
-        return self.img.url
+    # def __str__(self) -> str:
+    #     return self.img.url
+
 
 class Cidade(models.Model):
     nome = models.CharField(max_length=30)
@@ -13,17 +16,20 @@ class Cidade(models.Model):
     def __str__(self) -> str:
         return self.nome
 
+
 class DiasVisita(models.Model):
     dia = models.CharField(max_length=20)
-    
+
     def __str__(self) -> str:
         return self.dia
+
 
 class Horario(models.Model):
     horario = models.TimeField()
 
     def __str__(self) -> str:
         return str(self.horario)
+
 
 class Imovei(models.Model):
     choices = (('V', 'Venda'),
@@ -48,14 +54,15 @@ class Imovei(models.Model):
     def __str__(self) -> str:
         return self.rua
 
+
 class Visitas(models.Model):
     choices = (('S', 'Segunda'),
-                ('T', 'Terça'),
-                ('Q', 'Quarta'),
-                ('QI', 'Quinta'),
-                ('SE', 'Sexta'),
-                ('SA', 'Sabado'),
-                ('D', 'Domingo'))
+               ('T', 'Terça'),
+               ('Q', 'Quarta'),
+               ('QI', 'Quinta'),
+               ('SE', 'Sexta'),
+               ('SA', 'Sabado'),
+               ('D', 'Domingo'))
 
     choices_status = (('A', 'Agendado'),
                       ('F', 'Finalizado'),
@@ -65,7 +72,6 @@ class Visitas(models.Model):
     dia = models.CharField(max_length=20)
     horario = models.TimeField()
     status = models.CharField(max_length=1, choices=choices_status, default="A")
-
 
     def __str__(self) -> str:
         return self.usuario.username
