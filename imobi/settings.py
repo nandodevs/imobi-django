@@ -1,6 +1,6 @@
 from pathlib import Path
-import os
 import dj_database_url
+import os
 from django.contrib.messages import constants
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,19 +76,19 @@ WSGI_APPLICATION = 'imobi.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db-django',                      
-        'USER': 'postgres',
-        'PASSWORD': '070613',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'db-django',                      
+#         'USER': 'postgres',
+#         'PASSWORD': '070613',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 
-# DATABASES = {}
+DATABASES = {}
 
 DATABASES['default'] = dj_database_url.config()
 
