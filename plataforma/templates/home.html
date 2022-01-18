@@ -21,8 +21,8 @@
 
         <div class="col-md cont">
             <div class="card_imovel">
-                {% for img in imgs %}
-                <img class="img_capa_imovel" src="{{img.img.url}}">
+                {% for image in images %}
+                <img class="img_capa_imovel" src="{{image.url}}">
                 {% endfor %}
                 <div class="informacoes_imoveis">
                     <a class="a_none" href="{% url 'imovel' imovel.id %}">

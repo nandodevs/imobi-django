@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Imagem(models.Model):
-    img = CloudinaryField('img')
+    image = CloudinaryField('image')
 
     # def __str__(self) -> str:
     #     return self.img.url
